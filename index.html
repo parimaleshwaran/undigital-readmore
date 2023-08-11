@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Free Web tutorials" />
+		<meta name="keywords" content="HTML, CSS, JavaScript" />
+		<meta name="author" content="John Doe" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Title of the document</title>
+		<link href="./style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- read more page  -->
+		<div class="read-more read-he">
+			<div class="read-head">
+				<h1>American Eagle Outfitters</h1>
+				<p>
+					With an underwhelming 2.5 score on UnDigital’s Unboxing Guidelines,
+					American Eagle Outfitters has a long way to go if they want to deliver
+					a world-class experience to their customers.
+				</p>
+			</div>
+			<div class="percent">
+				<svg>
+					<circle cx="100" cy="100" r="90"></circle>
+					<circle cx="100" cy="100" r="90" style="--percent: 18"></circle>
+				</svg>
+				<div class="overall">
+					<p>2.5</p>
+					<span>Overall Score</span>
+				</div>
+			</div>
+		</div>
+		<!-- video section -->
+		<div class="read-more read-video">
+			<img src="./images/video-read.png" loading="lazy" alt="video" />
+		</div>
+		<!-- content section -->
+		<div class="unbox-read">
+			<div class="read-more read-tab">
+				<div class="read-us">
+					<h2>
+						American Eagle Outfitter’s Unboxing Experience Still Needs Work
+					</h2>
+					<p>
+						In the realm of direct-to-consumer (DTC) brands, the unboxing
+						experience plays a critical role in shaping customer perceptions and
+						influencing their decision to repurchase. This process is not simply
+						about unveiling a product; it's a tangible touchpoint that holds
+						immense potential for conveying your brand's story, ethos, and
+						commitment to quality.
+					</p>
+					<hr />
+					<span>Customer Name +1</span>
+					<p>
+						In the realm of direct-to-consumer (DTC) brands, the unboxing
+						experience plays a critical role in shaping customer perceptions and
+						influencing their decision to repurchase. This process is not simply
+						about unveiling a product; it's a tangible touchpoint that holds
+						immense potential for conveying your brand's story, ethos, and
+						commitment to quality.
+					</p>
+					<img
+						src="./images/lazy-loading.png"
+						loading="lazy"
+						alt="lazy-loading"
+					/>
+					<span>Customer Name +1</span>
+					<p>
+						In the realm of direct-to-consumer (DTC) brands, the unboxing
+						experience plays a critical role in shaping customer perceptions and
+						influencing their decision to repurchase. This process is not simply
+						about unveiling a product; it's a tangible touchpoint that holds
+						immense potential for conveying your brand's story, ethos, and
+						commitment to quality.
+					</p>
+					<span>Customer Name +1</span>
+					<p>
+						In the realm of direct-to-consumer (DTC) brands, the unboxing
+						experience plays a critical role in shaping customer perceptions and
+						influencing their decision to repurchase. This process is not simply
+						about unveiling a product; it's a tangible touchpoint that holds
+						immense potential for conveying your brand's story, ethos, and
+						commitment to quality.
+					</p>
+					<img
+						src="./images/lazy-loading.png"
+						loading="lazy"
+						alt="lazy-loading"
+					/>
+					<span>Customer Name +1</span>
+					<p>
+						In the realm of direct-to-consumer (DTC) brands, the unboxing
+						experience plays a critical role in shaping customer perceptions and
+						influencing their decision to repurchase. This process is not simply
+						about unveiling a product; it's a tangible touchpoint that holds
+						immense potential for conveying your brand's story, ethos, and
+						commitment to quality.
+					</p>
+					<hr />
+				</div>
+				<div id="container">
+					<div class="re-vid">
+						<img src="./images/video-read.png" alt="video" />
+					</div>
+					<div id="slider-container">
+						<span onclick="slideRight()" class="btn"
+							><img src="./images/left-arrow.svg" alt="left" />
+						</span>
+						<div id="slider" class="slider" style="margin-left: -25%">
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+							<div class="slide">
+								<img src="./images/video-read.png" />
+								<p>Video title lorem ipsum lorem ipsum</p>
+							</div>
+						</div>
+						<span onclick="slideLeft()" class="btn"
+							><img src="./images/right-arrow.svg" alt="right" />
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- slider section script -->
+		<script id="rendered-js">
+			var container = document.getElementById("container");
+			var slider = document.getElementById("slider");
+			var slides = document.getElementsByClassName("slide").length;
+			var buttons = document.getElementsByClassName("btn");
+			var currentPosition = 0;
+			var currentMargin = 0;
+			var slidesPerPage = 0;
+			var slidesCount = slides - slidesPerPage;
+			var containerWidth = container.offsetWidth;
+			var prevKeyActive = false;
+			var nextKeyActive = true;
+
+			window.addEventListener("resize", checkWidth);
+
+			function checkWidth() {
+				containerWidth = container.offsetWidth;
+				setParams(containerWidth);
+			}
+
+			function setParams(w) {
+				if (w < 551) {
+					slidesPerPage = 1;
+				} else {
+					if (w < 901) {
+						slidesPerPage = 2;
+					} else {
+						if (w < 1101) {
+							slidesPerPage = 3;
+						} else {
+							slidesPerPage = 4;
+						}
+					}
+				}
+				slidesCount = slides - slidesPerPage;
+				if (currentPosition > slidesCount) {
+					currentPosition -= slidesPerPage;
+				}
+				currentMargin = -currentPosition * (100 / slidesPerPage);
+				slider.style.marginLeft = currentMargin + "%";
+				if (currentPosition > 0) {
+					buttons[0].classList.remove("inactive");
+				}
+				if (currentPosition < slidesCount) {
+					buttons[1].classList.remove("inactive");
+				}
+				if (currentPosition >= slidesCount) {
+					buttons[1].classList.add("inactive");
+				}
+			}
+
+			setParams();
+
+			function slideRight() {
+				if (currentPosition != 0) {
+					slider.style.marginLeft = currentMargin + 100 / slidesPerPage + "%";
+					currentMargin += 100 / slidesPerPage;
+					currentPosition--;
+				}
+				if (currentPosition === 0) {
+					buttons[0].classList.add("inactive");
+				}
+				if (currentPosition < slidesCount) {
+					buttons[1].classList.remove("inactive");
+				}
+			}
+
+			function slideLeft() {
+				if (currentPosition != slidesCount) {
+					slider.style.marginLeft = currentMargin - 100 / slidesPerPage + "%";
+					currentMargin -= 100 / slidesPerPage;
+					currentPosition++;
+				}
+				if (currentPosition == slidesCount) {
+					buttons[1].classList.add("inactive");
+				}
+				if (currentPosition > 0) {
+					buttons[0].classList.remove("inactive");
+				}
+			}
+			//# sourceURL=pen.js
+		</script>
+		<script>
+			// const images = document.querySelectorAll("img");
+
+			// for (let img of images) {
+			// 	img.onload = ({ target }) =>
+			// 		setTimeout(() => {
+			// 			target.classList.add("loaded");
+			// 		}, 200);
+			// }
+
+			document.addEventListener("DOMContentLoaded", function () {
+				let lazyloadImages = document.querySelectorAll("img.lazy-load");
+				let lazyloadThrottleTimeout;
+
+				function lazyload() {
+					if (lazyloadThrottleTimeout) {
+						clearTimeout(lazyloadThrottleTimeout);
+					}
+					lazyloadThrottleTimeout = setTimeout(function () {
+						let scrollTop = window.pageYOffset;
+						lazyloadImages.forEach(function (img) {
+							if (img.offsetTop < window.innerHeight + scrollTop) {
+								// img.src = img.dataset.src;
+								img.classList.add("lazy-load");
+							}
+						});
+						if (lazyloadImages.length == 0) {
+							document.removeEventListener("scroll", lazyload);
+							window.removeEventListener("resize", lazyload);
+							window.removeEventListener("orientationChange", lazyload);
+						}
+					}, 20);
+				}
+				document.addEventListener("scroll", lazyload);
+				window.addEventListener("resize", lazyload);
+				window.addEventListener("orientationChange", lazyload);
+			});
+		</script>
+		<!--  -->
+		<!-- tab section  -->
+		<!-- <div class="tab-section">
+			<div id="viewall">
+				<div class="tab-lists" id="tabs">
+					<div class="industry" id="list0">View All</div>
+				</div>
+			</div>
+
+			<div class="tab-arrow">
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+			</div>
+			<div id="industryContainer" class="indusContent1"></div>
+		</div>
+
+		<div class="lead-eg" id="lead-more-btn">
+			<button onclick="showMore()">Lead More</button>
+		</div> -->
+
+		<!-- tabs section -->
+		<!-- <script>
+			const images = document.querySelectorAll("img");
+
+			for (let img of images) {
+				img.onload = ({ target }) =>
+					setTimeout(() => {
+						target.classList.add("loaded");
+					}, 200);
+			}
+		</script> -->
+		<!-- <script>
+			var tab;
+			var tabContent;
+			var industryContent;
+			window.onload = function () {
+				loadJson();
+				// set default
+			};
+
+			function initialDataSetup() {
+				const industryContainer = document.getElementById("industryContainer");
+				tabContent = document.getElementsByClassName("indusContent");
+				document
+					.getElementsByClassName("industry")
+					.item(0)
+					.classList.add("whiteborder");
+				for (index in document.getElementsByClassName("industry")) {
+					const element = document
+						.getElementsByClassName("industry")
+						.item(index);
+					console.log(element);
+					element.addEventListener("click", (el) => {
+						let values = industryContent.filter(
+							(cont) => cont.category === el.target.innerHTML
+						);
+						if (el.target.innerHTML === "View All") {
+							values = industryContent;
+						}
+						for (el1 of document.getElementsByClassName("industry")) {
+							el1.classList.remove("whiteborder");
+						}
+						el.target.classList.add("whiteborder");
+						removeCards();
+						createCards(values);
+					});
+				}
+			}
+
+			function removeCards() {
+				industryContainer.innerHTML = "";
+			}
+			function createCards(datas) {
+				const len = datas.length;
+				const leadMoreBtn = document.getElementById("lead-more-btn");
+				datas.length > 5
+					? (leadMoreBtn.style.display = "")
+					: (leadMoreBtn.style.display = "none");
+				for (let i = 0; i < len; i++) {
+					const container = document.createElement("div");
+					container.id = `expense${i}`;
+					container.classList.add("indus-card");
+					container.setAttribute("name", datas[i].category);
+					container.innerHTML = `
+					                     <div class="ca-vid">
+						                 <video src=${
+																datas[i]?.video
+															} muted loop id="video${i}"></video>
+										 <img src=${datas[i].thumbnail} id="thumb${i}"></div>
+						                 <div class="indus-det">
+						                 <div class="indus-eg">
+						                 <div class='industry-title'><span>${
+																datas[i].title
+															}</span></div>
+						                 <div class='industry-sub-title'><h3>${
+																datas[i].sub_title
+															}</h3></div>
+						                 <div class='industry-content'><p>${datas[i].content}</p></div>
+						                 <button>${
+																datas[i].button
+															}<img src="./images/review-arrow.svg"></button>
+						                 </div>
+										 <div class="percent">
+                                         <svg>
+                                         <circle cx="50" cy="50" r="28"></circle>
+                                         <circle cx="50" cy="50" r="28" style="--percent:${
+																						datas[i].spinner * 10
+																					};"></circle>
+                                         </svg>
+                                         <p>${datas[i].spinner}</p>
+                                         </div>
+                                         </div>
+                                         <div class="load-con">
+						                 </div>
+						                 `;
+					industryContainer.appendChild(container);
+					cardHover(datas[i], i);
+				}
+			}
+
+			function loadJson() {
+				// var jsonData = JSON.parse('{{ json_output|e("js") }}');
+				// industryContent = jsonData;
+				fetch("https://64c7fae1a1fe0128fbd58475.mockapi.io/industry")
+					.then((res) => res.json())
+					.then((data) => {
+						industryContent = data;
+						removeCards();
+						createCards(industryContent);
+						getTabs(industryContent);
+						initialDataSetup();
+					});
+			}
+		</script>
+		<script>
+			let experience_tab_index = 0;
+			let total_experience_tab = 0;
+			function cardHover(data, index) {
+				if (index > 4) {
+					document.getElementById(`expense${index}`).style.display = "none";
+				}
+
+				document
+					.getElementById(`expense${index}`)
+					.addEventListener("mouseover", (e) => {
+						const vide = document.getElementById(`video${index}`);
+						vide.play();
+						document.getElementById(`thumb${index}`).style.display = "none";
+					});
+				document
+					.getElementById(`expense${index}`)
+					.addEventListener("mouseleave", (e) => {
+						const vide = document.getElementById(`video${index}`);
+						vide.pause();
+						document.getElementById(`thumb${index}`).style.display = "initial";
+					});
+			}
+
+			function showMore() {
+				const len = industryContent.length;
+				console.log(len);
+				for (let i = 0; i < len; i++) {
+					document.getElementById(`expense${i}`).style.display = "flex";
+				}
+			}
+
+			function getTabs(data) {
+				tab = [];
+				data.map((res, index) => {
+					if (data.indexOf(res) === index) {
+						tab.push(res.category);
+					}
+				});
+				tab = [...new Set(tab)];
+				console.log(tab);
+				const len = tab.length;
+				total_experience_tab = len;
+				const tabs = document.getElementById("tabs");
+				for (let i = 0; i < len; i++) {
+					const divEl = document.createElement("div");
+					divEl.classList.add("industry");
+					divEl.setAttribute("id", `list${i + 1}`);
+					divEl.innerHTML = tab[i];
+					if (window.innerWidth <= 480) {
+						divEl.style.display = "none";
+					}
+					tabs.appendChild(divEl);
+				}
+			}
+
+			let slideIndex = 1;
+			function plusSlides(n) {
+				if (
+					(n === 1 && experience_tab_index >= total_experience_tab) ||
+					(n === -1 && experience_tab_index === 0)
+				) {
+					return;
+				}
+				experience_tab_index = experience_tab_index + n;
+				const experiences_tabs_eles = document.querySelectorAll(".industry");
+				let values;
+				for (const tab of experiences_tabs_eles) {
+					if (tab.getAttribute("id") === `list${experience_tab_index}`) {
+						tab.classList.add("whiteborder");
+						tab.style.display = "";
+						if (tab.innerHTML === "View All") {
+							values = industryContent;
+						} else {
+							values = industryContent.filter(
+								(cont) => cont.category === tab.innerHTML
+							);
+						}
+						removeCards();
+						createCards(values);
+					} else {
+						tab.classList.remove("whiteborder");
+						tab.style.display = "none";
+					}
+				}
+			}
+		</script> -->
+	</body>
+</html>
+
+<!-- (industryContent = [
+					{
+						category: "Industry",
+						title: "Cherath",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 2.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"	https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+					{
+						category: "Industry",
+						title: "Babu",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 5.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+					{
+						category: "Industry 3",
+						title: "Esakki",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 7.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"	https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+					{
+						category: "Industry 4",
+						title: "Surya",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 9.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"	https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+					{
+						category: "Industry 4",
+						title: "Surya",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 9.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"	https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+					{
+						category: "Industry 4",
+						title: "Surya",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 9.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"	https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+					{
+						category: "Industry 4",
+						title: "Surya",
+						sub_title: "American Eagle Outfitters",
+						content:
+							"The right priorities help us in the direction of our potential which is why it is important for earnings.",
+						button: "Read review",
+						spinner: 9.5,
+						video: "https://www.w3schools.com/tags/mov_bbb.mp4",
+						thumbnail:
+							"	https://undigital.com/hs-fs/hubfs/T%20Delarm.png?width=958&name=T%20Delarm.png",
+					},
+				]); -->

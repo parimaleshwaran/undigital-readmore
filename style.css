@@ -1,0 +1,299 @@
+/* unboxing section */
+@font-face {
+	font-family: Proxima Nova;
+	src: url("proxima-nova.otf");
+}
+body,
+button {
+	font-family: Archivo;
+	margin: 0;
+	padding: 0;
+}
+h1,
+p,
+.unbox-ex h2 {
+	padding: 0;
+	margin: 0;
+}
+p,
+span,
+h2,
+h1 {
+	font-style: normal;
+}
+.read-head h1,
+.read-us h2,
+.read-us span {
+	font-weight: 700;
+}
+.percent svg circle,
+.read-video img,
+.read-us img {
+	width: 100%;
+}
+/* first section */
+.read-more {
+	display: flex;
+	gap: 107px;
+	margin: 0 auto;
+	max-width: 1138px;
+	margin-top: 115px;
+	padding: 115px 24px 100px 24px;
+}
+.read-he {
+	padding: 0 24px;
+}
+.percent {
+	margin-left: auto;
+}
+
+.read-head h1 {
+	color: #333;
+	font-size: 48px;
+	width: 566px;
+	line-height: 52px;
+}
+.read-head p {
+	color: #4d4d4d;
+	font-size: 18px;
+	font-weight: 500;
+	padding-top: 30px;
+	line-height: 28px;
+	width: 600px;
+}
+.percent {
+	position: relative;
+}
+
+.percent svg {
+	width: 200px;
+	height: 200px;
+}
+
+.percent svg circle {
+	height: 100%;
+	fill: none;
+	stroke: #f0f0f0;
+	stroke-width: 14;
+	stroke-linecap: round;
+}
+
+.percent svg circle:last-of-type {
+	stroke-dasharray: 250px;
+	stroke-dashoffset: calc(150px - (150px * var(--percent)) / 100);
+	stroke: #f15f24;
+}
+.overall {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 60px;
+	text-align: center;
+}
+.overall span {
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "Proxima Nova";
+	color: rgba(48, 48, 48, 0.6);
+}
+.percent p {
+	font-size: 55px;
+	font-weight: 600;
+	text-align: center;
+	font-family: "Proxima Nova";
+}
+/* video section */
+
+.read-video {
+	display: block;
+	padding: 0 24px;
+}
+.read-video img {
+	border-radius: 14px;
+}
+/* content setion */
+.unbox-read {
+	background-color: #f9f9f9;
+	margin-top: 115px;
+}
+
+.read-us h2 {
+	font-size: 32px;
+	line-height: 41px;
+	margin: 0;
+}
+.read-us p {
+	font-size: 18px;
+	line-height: 34px;
+	color: #303030;
+	padding-top: 10px;
+}
+
+.read-us hr {
+	margin-top: 50px;
+}
+.read-us span {
+	color: #303030;
+	margin-top: 40px;
+	display: block;
+}
+.read-us img {
+	margin-top: 40px;
+}
+
+/* slider section */
+#slider-container {
+	/* width: 73vw; */
+	max-width: 480px;
+	position: relative;
+	overflow: hidden;
+}
+
+#slider-container .btn {
+	position: absolute;
+	top: calc(50% - 18px);
+	border: 2px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 10;
+	width: 19px;
+	height: 19px;
+}
+#slider-container .btn img {
+	padding-left: 5px;
+}
+
+#slider-container .btn:first-of-type {
+	left: 10px;
+}
+
+#slider-container .btn:last-of-type {
+	right: 7px;
+}
+
+#slider-container #slider {
+	display: flex;
+	/* width: 1000%;
+	height: 100%; */
+	transition: all 0.5s;
+}
+
+#slider-container #slider .slide {
+	margin: auto 6px;
+	display: grid;
+	place-items: center;
+}
+#slider-container #slider .slide img,
+.slide p {
+	width: 112px;
+	font-size: 12px;
+	color: #303030;
+	line-height: 17px;
+}
+#slider-container::after {
+	content: "";
+	background: linear-gradient(
+		180deg,
+		rgba(249, 249, 249, 0) 23.96%,
+		#f9f9f9 100%
+	);
+	width: 130px;
+	transform: rotate(270deg);
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 132px;
+}
+#slider-container::before {
+	content: "";
+	background: linear-gradient(
+		180deg,
+		rgba(249, 249, 249, 0) 23.96%,
+		#f9f9f9 100%
+	);
+	width: 170px;
+	transform: rotate(90deg);
+	position: absolute;
+	left: -30px;
+	/* top: 138px; */
+	height: 100px;
+}
+.re-vid img {
+	width: 480px;
+	border-radius: 12px;
+	padding-bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.read-head h1 {
+		width: 488px;
+	}
+	.read-more {
+		gap: 0;
+	}
+	.read-tab {
+		flex-direction: column;
+	}
+	.read-head p {
+		width: 500px;
+	}
+	#container {
+		margin: auto;
+		padding-top: 40px;
+	}
+}
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 768px) {
+	.read-head p {
+		width: 488px;
+	}
+	.read-head p {
+		width: 500px;
+	}
+	.read-more {
+		gap: 0;
+	}
+	.read-tab {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.read-more {
+		flex-direction: column-reverse;
+		margin-top: 80px;
+		text-align: center;
+	}
+	.read-head h1,
+	.read-head p {
+		width: auto;
+		padding-top: 10px;
+	}
+	.percent,
+	#slider-container {
+		margin: auto;
+	}
+	.read-tab {
+		margin-top: 0;
+		flex-direction: column;
+	}
+	.re-vid img {
+		width: 100%;
+		margin: 20px auto;
+	}
+	#slider-container {
+		max-width: 300px;
+	}
+}
+
+/* .lazy-load {
+	display: block;
+	margin: 10px auto;
+	opacity: 0;
+	transform: scale(1.2);
+	transition: all 2s;
+	&.loaded {
+		opacity: 1;
+		transform: none;
+	}
+} */
