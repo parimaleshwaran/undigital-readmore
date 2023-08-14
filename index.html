@@ -1,283 +1,279 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Free Web tutorials" />
-		<meta name="keywords" content="HTML, CSS, JavaScript" />
-		<meta name="author" content="John Doe" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Title of the document</title>
-		<link href="./style.css" rel="stylesheet" />
-	</head>
-	<body>
-		<!-- read more page  -->
-		<div class="read-more read-he">
-			<div class="read-head">
-				<h1>American Eagle Outfitters</h1>
-				<p>
-					With an underwhelming 2.5 score on UnDigital’s Unboxing Guidelines,
-					American Eagle Outfitters has a long way to go if they want to deliver
-					a world-class experience to their customers.
-				</p>
-			</div>
-			<div class="percent">
-				<svg>
-					<circle cx="100" cy="100" r="90"></circle>
-					<circle cx="100" cy="100" r="90" style="--percent: 18"></circle>
-				</svg>
-				<div class="overall">
-					<p>2.5</p>
-					<span>Overall Score</span>
-				</div>
-			</div>
-		</div>
-		<!-- video section -->
-		<div class="read-more read-video">
-			<img src="./images/video-read.png" loading="lazy" alt="video" />
-		</div>
-		<!-- content section -->
-		<div class="unbox-read">
-			<div class="read-more read-tab">
-				<div class="read-us">
-					<h2>
-						American Eagle Outfitter’s Unboxing Experience Still Needs Work
-					</h2>
-					<p>
-						In the realm of direct-to-consumer (DTC) brands, the unboxing
-						experience plays a critical role in shaping customer perceptions and
-						influencing their decision to repurchase. This process is not simply
-						about unveiling a product; it's a tangible touchpoint that holds
-						immense potential for conveying your brand's story, ethos, and
-						commitment to quality.
-					</p>
-					<hr />
-					<span>Customer Name +1</span>
-					<p>
-						In the realm of direct-to-consumer (DTC) brands, the unboxing
-						experience plays a critical role in shaping customer perceptions and
-						influencing their decision to repurchase. This process is not simply
-						about unveiling a product; it's a tangible touchpoint that holds
-						immense potential for conveying your brand's story, ethos, and
-						commitment to quality.
-					</p>
-					<img
-						src="./images/lazy-loading.png"
-						loading="lazy"
-						alt="lazy-loading"
-					/>
-					<span>Customer Name +1</span>
-					<p>
-						In the realm of direct-to-consumer (DTC) brands, the unboxing
-						experience plays a critical role in shaping customer perceptions and
-						influencing their decision to repurchase. This process is not simply
-						about unveiling a product; it's a tangible touchpoint that holds
-						immense potential for conveying your brand's story, ethos, and
-						commitment to quality.
-					</p>
-					<span>Customer Name +1</span>
-					<p>
-						In the realm of direct-to-consumer (DTC) brands, the unboxing
-						experience plays a critical role in shaping customer perceptions and
-						influencing their decision to repurchase. This process is not simply
-						about unveiling a product; it's a tangible touchpoint that holds
-						immense potential for conveying your brand's story, ethos, and
-						commitment to quality.
-					</p>
-					<img
-						src="./images/lazy-loading.png"
-						loading="lazy"
-						alt="lazy-loading"
-					/>
-					<span>Customer Name +1</span>
-					<p>
-						In the realm of direct-to-consumer (DTC) brands, the unboxing
-						experience plays a critical role in shaping customer perceptions and
-						influencing their decision to repurchase. This process is not simply
-						about unveiling a product; it's a tangible touchpoint that holds
-						immense potential for conveying your brand's story, ethos, and
-						commitment to quality.
-					</p>
-					<hr />
-				</div>
-				<div id="container">
-					<div class="re-vid">
-						<img src="./images/video-read.png" alt="video" />
-					</div>
-					<div id="slider-container">
-						<span onclick="slideRight()" class="btn"
-							><img src="./images/left-arrow.svg" alt="left" />
-						</span>
-						<div id="slider" class="slider" style="margin-left: -25%">
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-							<div class="slide">
-								<img src="./images/video-read.png" />
-								<p>Video title lorem ipsum lorem ipsum</p>
-							</div>
-						</div>
-						<span onclick="slideLeft()" class="btn"
-							><img src="./images/right-arrow.svg" alt="right" />
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- slider section script -->
-		<script id="rendered-js">
-			var container = document.getElementById("container");
-			var slider = document.getElementById("slider");
-			var slides = document.getElementsByClassName("slide").length;
-			var buttons = document.getElementsByClassName("btn");
-			var currentPosition = 0;
-			var currentMargin = 0;
-			var slidesPerPage = 0;
-			var slidesCount = slides - slidesPerPage;
-			var containerWidth = container.offsetWidth;
-			var prevKeyActive = false;
-			var nextKeyActive = true;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="John Doe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Title of the document</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- read more page  -->
+    <div class="read-more read-he">
+      <div class="read-head">
+        <h1 id="show-title"></h1>
+        <p id="title-content"></p>
+      </div>
+      <div class="percent">
+        <svg>
+          <circle cx="100" cy="100" r="90"></circle>
+          <circle cx="100" cy="100" r="90" style="--percent: 18"></circle>
+        </svg>
+        <div class="overall">
+          <p>2.5</p>
+          <span>Overall Score</span>
+        </div>
+      </div>
+    </div>
+    <!-- video section -->
+    <div class="read-more read-video" id="show-img">
+      <!-- <img src="./images/video-read.png" loading="lazy" alt="video" /> -->
+    </div>
+    <!-- content section -->
+    <div class="unbox-read">
+      <div class="read-more read-tab">
+        <div class="read-us" id="dynamic-content">
+          <!-- <h2>
+            American Eagle Outfitter’s Unboxing Experience Still Needs Work
+          </h2>
+          <p>
+            In the realm of direct-to-consumer (DTC) brands, the unboxing
+            experience plays a critical role in shaping customer perceptions and
+            influencing their decision to repurchase. This process is not simply
+            about unveiling a product; it's a tangible touchpoint that holds
+            immense potential for conveying your brand's story, ethos, and
+            commitment to quality.
+          </p>
+          <hr />
+          <span>Customer Name +1</span>
+          <p>
+            In the realm of direct-to-consumer (DTC) brands, the unboxing
+            experience plays a critical role in shaping customer perceptions and
+            influencing their decision to repurchase. This process is not simply
+            about unveiling a product; it's a tangible touchpoint that holds
+            immense potential for conveying your brand's story, ethos, and
+            commitment to quality.
+          </p>
+          <img
+            src="./images/lazy-loading.png"
+            loading="lazy"
+            alt="lazy-loading"
+          />
+          <span>Customer Name +1</span>
+          <p>
+            In the realm of direct-to-consumer (DTC) brands, the unboxing
+            experience plays a critical role in shaping customer perceptions and
+            influencing their decision to repurchase. This process is not simply
+            about unveiling a product; it's a tangible touchpoint that holds
+            immense potential for conveying your brand's story, ethos, and
+            commitment to quality.
+          </p>
+          <span>Customer Name +1</span>
+          <p>
+            In the realm of direct-to-consumer (DTC) brands, the unboxing
+            experience plays a critical role in shaping customer perceptions and
+            influencing their decision to repurchase. This process is not simply
+            about unveiling a product; it's a tangible touchpoint that holds
+            immense potential for conveying your brand's story, ethos, and
+            commitment to quality.
+          </p>
+          <img
+            src="./images/lazy-loading.png"
+            loading="lazy"
+            alt="lazy-loading"
+          />
+          <span>Customer Name +1</span>
+          <p>
+            In the realm of direct-to-consumer (DTC) brands, the unboxing
+            experience plays a critical role in shaping customer perceptions and
+            influencing their decision to repurchase. This process is not simply
+            about unveiling a product; it's a tangible touchpoint that holds
+            immense potential for conveying your brand's story, ethos, and
+            commitment to quality.
+          </p>
+          <hr /> -->
+        </div>
+        <div id="container">
+          <div class="re-vid">
+            <img src="./images/video-read.png" alt="video" />
+          </div>
+          <div id="slider-container">
+            <span onclick="slideRight()" class="btn"
+              ><img src="./images/left-arrow.svg" alt="left" />
+            </span>
+            <div id="slider" class="slider" style="margin-left: -25%">
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+              <div class="slide">
+                <img src="./images/video-read.png" />
+                <p>Video title lorem ipsum lorem ipsum</p>
+              </div>
+            </div>
+            <span onclick="slideLeft()" class="btn"
+              ><img src="./images/right-arrow.svg" alt="right" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- slider section script -->
+    <script id="rendered-js">
+      var container = document.getElementById("container");
+      var slider = document.getElementById("slider");
+      var slides = document.getElementsByClassName("slide").length;
+      var buttons = document.getElementsByClassName("btn");
+      var currentPosition = 0;
+      var currentMargin = 0;
+      var slidesPerPage = 0;
+      var slidesCount = slides - slidesPerPage;
+      var containerWidth = container.offsetWidth;
+      var prevKeyActive = false;
+      var nextKeyActive = true;
 
-			window.addEventListener("resize", checkWidth);
+      window.addEventListener("resize", checkWidth);
 
-			function checkWidth() {
-				containerWidth = container.offsetWidth;
-				setParams(containerWidth);
-			}
+      function checkWidth() {
+        containerWidth = container.offsetWidth;
+        setParams(containerWidth);
+      }
 
-			function setParams(w) {
-				if (w < 551) {
-					slidesPerPage = 1;
-				} else {
-					if (w < 901) {
-						slidesPerPage = 2;
-					} else {
-						if (w < 1101) {
-							slidesPerPage = 3;
-						} else {
-							slidesPerPage = 4;
-						}
-					}
-				}
-				slidesCount = slides - slidesPerPage;
-				if (currentPosition > slidesCount) {
-					currentPosition -= slidesPerPage;
-				}
-				currentMargin = -currentPosition * (100 / slidesPerPage);
-				slider.style.marginLeft = currentMargin + "%";
-				if (currentPosition > 0) {
-					buttons[0].classList.remove("inactive");
-				}
-				if (currentPosition < slidesCount) {
-					buttons[1].classList.remove("inactive");
-				}
-				if (currentPosition >= slidesCount) {
-					buttons[1].classList.add("inactive");
-				}
-			}
+      function setParams(w) {
+        if (w < 551) {
+          slidesPerPage = 1;
+        } else {
+          if (w < 901) {
+            slidesPerPage = 2;
+          } else {
+            if (w < 1101) {
+              slidesPerPage = 3;
+            } else {
+              slidesPerPage = 4;
+            }
+          }
+        }
+        slidesCount = slides - slidesPerPage;
+        if (currentPosition > slidesCount) {
+          currentPosition -= slidesPerPage;
+        }
+        currentMargin = -currentPosition * (100 / slidesPerPage);
+        slider.style.marginLeft = currentMargin + "%";
+        if (currentPosition > 0) {
+          buttons[0].classList.remove("inactive");
+        }
+        if (currentPosition < slidesCount) {
+          buttons[1].classList.remove("inactive");
+        }
+        if (currentPosition >= slidesCount) {
+          buttons[1].classList.add("inactive");
+        }
+      }
 
-			setParams();
+      setParams();
 
-			function slideRight() {
-				if (currentPosition != 0) {
-					slider.style.marginLeft = currentMargin + 100 / slidesPerPage + "%";
-					currentMargin += 100 / slidesPerPage;
-					currentPosition--;
-				}
-				if (currentPosition === 0) {
-					buttons[0].classList.add("inactive");
-				}
-				if (currentPosition < slidesCount) {
-					buttons[1].classList.remove("inactive");
-				}
-			}
+      function slideRight() {
+        if (currentPosition != 0) {
+          slider.style.marginLeft = currentMargin + 100 / slidesPerPage + "%";
+          currentMargin += 100 / slidesPerPage;
+          currentPosition--;
+        }
+        if (currentPosition === 0) {
+          buttons[0].classList.add("inactive");
+        }
+        if (currentPosition < slidesCount) {
+          buttons[1].classList.remove("inactive");
+        }
+      }
 
-			function slideLeft() {
-				if (currentPosition != slidesCount) {
-					slider.style.marginLeft = currentMargin - 100 / slidesPerPage + "%";
-					currentMargin -= 100 / slidesPerPage;
-					currentPosition++;
-				}
-				if (currentPosition == slidesCount) {
-					buttons[1].classList.add("inactive");
-				}
-				if (currentPosition > 0) {
-					buttons[0].classList.remove("inactive");
-				}
-			}
-			//# sourceURL=pen.js
-		</script>
-		<script>
-			// const images = document.querySelectorAll("img");
+      function slideLeft() {
+        if (currentPosition != slidesCount) {
+          slider.style.marginLeft = currentMargin - 100 / slidesPerPage + "%";
+          currentMargin -= 100 / slidesPerPage;
+          currentPosition++;
+        }
+        if (currentPosition == slidesCount) {
+          buttons[1].classList.add("inactive");
+        }
+        if (currentPosition > 0) {
+          buttons[0].classList.remove("inactive");
+        }
+      }
+      //# sourceURL=pen.js
+    </script>
+    <script>
+      // const images = document.querySelectorAll("img");
 
-			// for (let img of images) {
-			// 	img.onload = ({ target }) =>
-			// 		setTimeout(() => {
-			// 			target.classList.add("loaded");
-			// 		}, 200);
-			// }
+      // for (let img of images) {
+      // 	img.onload = ({ target }) =>
+      // 		setTimeout(() => {
+      // 			target.classList.add("loaded");
+      // 		}, 200);
+      // }
 
-			document.addEventListener("DOMContentLoaded", function () {
-				let lazyloadImages = document.querySelectorAll("img.lazy-load");
-				let lazyloadThrottleTimeout;
+      document.addEventListener("DOMContentLoaded", function () {
+        let lazyloadImages = document.querySelectorAll("img.lazy-load");
+        let lazyloadThrottleTimeout;
 
-				function lazyload() {
-					if (lazyloadThrottleTimeout) {
-						clearTimeout(lazyloadThrottleTimeout);
-					}
-					lazyloadThrottleTimeout = setTimeout(function () {
-						let scrollTop = window.pageYOffset;
-						lazyloadImages.forEach(function (img) {
-							if (img.offsetTop < window.innerHeight + scrollTop) {
-								// img.src = img.dataset.src;
-								img.classList.add("lazy-load");
-							}
-						});
-						if (lazyloadImages.length == 0) {
-							document.removeEventListener("scroll", lazyload);
-							window.removeEventListener("resize", lazyload);
-							window.removeEventListener("orientationChange", lazyload);
-						}
-					}, 20);
-				}
-				document.addEventListener("scroll", lazyload);
-				window.addEventListener("resize", lazyload);
-				window.addEventListener("orientationChange", lazyload);
-			});
-		</script>
-		<!--  -->
-		<!-- tab section  -->
-		<!-- <div class="tab-section">
+        function lazyload() {
+          if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }
+          lazyloadThrottleTimeout = setTimeout(function () {
+            let scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function (img) {
+              if (img.offsetTop < window.innerHeight + scrollTop) {
+                // img.src = img.dataset.src;
+                img.classList.add("lazy-load");
+              }
+            });
+            if (lazyloadImages.length == 0) {
+              document.removeEventListener("scroll", lazyload);
+              window.removeEventListener("resize", lazyload);
+              window.removeEventListener("orientationChange", lazyload);
+            }
+          }, 20);
+        }
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      });
+    </script>
+    <!--  -->
+    <!-- tab section  -->
+    <!-- <div class="tab-section">
 			<div id="viewall">
 				<div class="tab-lists" id="tabs">
 					<div class="industry" id="list0">View All</div>
@@ -295,8 +291,8 @@
 			<button onclick="showMore()">Lead More</button>
 		</div> -->
 
-		<!-- tabs section -->
-		<!-- <script>
+    <!-- tabs section -->
+    <!-- <script>
 			const images = document.querySelectorAll("img");
 
 			for (let img of images) {
@@ -306,7 +302,7 @@
 					}, 200);
 			}
 		</script> -->
-		<!-- <script>
+    <!-- <script>
 			var tab;
 			var tabContent;
 			var industryContent;
@@ -496,7 +492,72 @@
 				}
 			}
 		</script> -->
-	</body>
+
+    <script>
+      const newData = {
+        title: "American Eagle Outfitters",
+        range: 20,
+        titleContent:
+          "With an underwhelming 2.5 score on UnDigital’s Unboxing Guidelines, American Eagle Outfitters has a long way to go if they want to deliver a world-class experience to their customers.",
+        imglink: "./images/video-read.png",
+        subTitle:
+          "American Eagle Outfitter’s Unboxing Experience Still Needs Work",
+        subContent:
+          "In the realm of direct-to-consumer (DTC) brands, the unboxing experience plays a critical role in shaping customer perceptions and influencing their decision to repurchase. This process is not simply about unveiling a product; it's a tangible touchpoint that holds immense potential for conveying your brand's story, ethos, and commitment to quality.",
+        loadContent: [
+          {
+            title: "Customer Name +1",
+            content:
+              "In the realm of direct-to-consumer (DTC) brands, the unboxing experience plays a critical role in shaping customer perceptions and influencing their decision to repurchase. This process is not simply about unveiling a product; it's a tangible touchpoint that holds immense potential for conveying your brand's story, ethos, and commitment to quality.",
+            image: "./images/video-read.png",
+          },
+          {
+            title: "Customer Name +1",
+            content:
+              "In the realm of direct-to-consumer (DTC) brands, the unboxing experience plays a critical role in shaping customer perceptions and influencing their decision to repurchase. This process is not simply about unveiling a product; it's a tangible touchpoint that holds immense potential for conveying your brand's story, ethos, and commitment to quality.",
+            image: "./images/video-read.png",
+          },
+          {
+            title: "Customer Name +1",
+            content:
+              "In the realm of direct-to-consumer (DTC) brands, the unboxing experience plays a critical role in shaping customer perceptions and influencing their decision to repurchase. This process is not simply about unveiling a product; it's a tangible touchpoint that holds immense potential for conveying your brand's story, ethos, and commitment to quality.",
+            image: "./images/video-read.png",
+          },
+        ],
+      };
+
+      document.getElementById("show-title").innerHTML = newData.title;
+      document.getElementById("title-content").innerHTML = newData.titleContent;
+      const createImg = document.createElement("img");
+      createImg.src = newData.imglink;
+      createImg.loading = "lazy";
+      createImg.alt = "video";
+      document.getElementById("show-img").appendChild(createImg);
+      const content = document.getElementById("dynamic-content");
+      const headView = document.createElement("h2");
+      headView.innerHTML = newData.subTitle;
+      content.appendChild(headView);
+      const headContentView = document.createElement("p");
+      headContentView.innerHTML = newData.subContent;
+      content.appendChild(headContentView);
+      const horizontalLine = document.createElement("hr");
+      content.appendChild(horizontalLine);
+      const len = newData.loadContent.length;
+      for (let i = 0; i < len; i++) {
+        const headContent = document.createElement("span");
+        headContent.innerHTML = newData.loadContent[i].title;
+        content.appendChild(headContent);
+        const bodyContent = document.createElement("p");
+        bodyContent.innerHTML = newData.loadContent[i].content;
+        content.appendChild(bodyContent);
+        const imgView = document.createElement("img");
+        imgView.src = newData.loadContent[i].image;
+        imgView.loading = "lazy";
+        imgView.alt = "video";
+        content.appendChild(imgView);
+      }
+    </script>
+  </body>
 </html>
 
 <!-- (industryContent = [
